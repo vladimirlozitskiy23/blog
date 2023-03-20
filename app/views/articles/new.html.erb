@@ -1,6 +1,14 @@
 <h3>New article<h3>
 
 <%= form_for :articles do |t|%>
-    <%= t.label :title%><br/>
-    <%= t.text_field :title%>
+    <p>
+        <%= t.label :title%><br/>
+        <%= t.text_field :title%>
+    </p>
+
+    <p>
+        <%= t.label :text%><br/>
+        <%= t.text_area :text%>
+    </p>
+        <%= t.submit%>
 <% end%>
