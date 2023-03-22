@@ -1,14 +1,16 @@
 <h3>New article<h3>
 
-<%= form_for :articles do |t|%>
+<%= form_with(model: @article, local: true, data: { turbo: false },  url: articles_path) do |f| %>
     <p>
-        <%= t.label :title%><br/>
-        <%= t.text_field :title%>
+        <%= f.label :title %><br/>
+        <%= f.text_field :title %>
     </p>
 
     <p>
-        <%= t.label :text%><br/>
-        <%= t.text_area :text%>
+        <%= f.label :text %><br/>
+        <%= f.text_area :text %>
     </p>
-        <%= t.submit%>
-<% end%>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
