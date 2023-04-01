@@ -1,1 +1,16 @@
 <h3>Contacts</h3>
+<%= form_with(model: @contact,local: true, data: {turbo: false}, url: contacts_path) do |f|%>
+<p>
+    <%= f.label :email%><br/>
+    <%= f.text_field :email%>
+</p>
+
+<p>
+    <%= f.label :message%><br/>
+    <%= f.text_field :message%>
+</p>
+
+<%= f.submit 'Send message'%>
+
+
+<% end %>
