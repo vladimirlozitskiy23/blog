@@ -1,13 +1,20 @@
 <h3>Contacts</h3>
 <%= form_with(model: @contact,local: true, data: {turbo: false}, url: contacts_path) do |f|%>
 <p>
+    <% @contact.errors.full_messages.each do |msg|%>
+    <ul>
+        <li><%= msg %>
+    </ul>
+    <% end %>
+</p>
+<p>
     <%= f.label :email%><br/>
     <%= f.text_field :email%>
 </p>
 
 <p>
     <%= f.label :message%><br/>
-    <%= f.text_field :message%>
+    <%= f.text_area :message%>
 </p>
 
 <%= f.submit 'Send message'%>
