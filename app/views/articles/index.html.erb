@@ -1,0 +1,7 @@
+<h3>The articles list</h3>
+
+<% @articles.each do |article|%>
+    <h4><%= article.title%></h4>
+    <p><%= article.text%></p>
+    <hr/>
+<% end %>
