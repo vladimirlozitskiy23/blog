@@ -1,6 +1,16 @@
 <h3><%= @article.title%></h3>
 <p><%= @article.text%></p>
 
+<% @article.comments.each do |comment|%>
+    <p>
+        <%= comment.author%>
+    </p>
+     <p>
+        <%= comment.body%>
+    </p>
+    <hr/>
+<% end%>
+
 <%= form_with(model: [@article,@article.comments.build], local: true, data: {turbo: false}) do |f| %>
 <p>
         <%= f.label :author %><br/>
