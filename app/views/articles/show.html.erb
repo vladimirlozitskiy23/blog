@@ -14,7 +14,7 @@
 <%= form_with(model: [@article,@article.comments.build], local: true, data: {turbo: false}) do |f| %>
 <p>
         <%= f.label :author %><br/>
-        <%= f.text_field :author %>
+        <%= f.text_field :author%>
     </p>
 
     <p>
