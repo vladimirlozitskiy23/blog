@@ -59,6 +59,8 @@ group :development do
   gem "capybara"
   gem "rspec-rails", "~> 4.1.0"
   gem "shoulda-matchers",  '~> 5.0'
+  gem "factory_girl_rails", "~> 4.0"
+
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
