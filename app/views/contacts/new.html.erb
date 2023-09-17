@@ -1,4 +1,4 @@
-<h3>Contacts</h3>
+<h3><%= t('contacts.contact_us') %></h3>
 <%= form_with(model: @contact,local: true, data: {turbo: false}, url: contacts_path) do |f|%>
 <p>
     <% @contact.errors.full_messages.each do |msg|%>
